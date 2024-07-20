@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(40, 17, 50);
+            color: whitesmoke;
+        }
+
+        h1 {
+            margin-top: 5%;
+            font-size: 3rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #42474b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        URL SHORTNER
+    </h1>
+    <% if (locals.id) { %>
+        <h4>Your Shortened URL is: <a href="localhost:3000/url/<%= locals.id %>">https://localhost:3000/url/<%=
+                    locals.id %></a></h4>
+        <% } %>
+            <% if (locals.urls) { %>
+                <table>
+                    <thead>
+
+                        <th>S.No.</th>
+                        <th>ShortId</th>
+                        <th>Redirect</th>
+                        <th>Clicks</th>
+                    </thead>
+                    
+                        <% locals.urls.forEach((url,index)=> { %>
+                            <tr>
+                            <td>
+                                <%=index +1 %>
+                            </td>
+                            <td>
+                                <%=url.shortId %>
+                            </td>
+                            <td>
+                                <%=url.redirectUrl %>
+                            </td>
+                            <td>
+                                <%=url.clickCount %>
+                            </td>
+                            <% }) %>
+                    </tr>
+
+                </table>
+                <% } %>
+                    <form method="POST" action="/url">
+                        <label for="url">Enter Your Original URL</label>
+                        <input type="text" name="redirectUrl" id="redirectUrl" placeholder="https://example.com">
+                        <button type="submit">Generate URL</button>
+                    </form>
+</body>
+
+</html>
