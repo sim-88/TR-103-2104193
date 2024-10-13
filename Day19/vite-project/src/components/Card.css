@@ -1,0 +1,14 @@
+.card{
+    width: 20vw;
+    border: 1px solid rgb(150, 136, 183);
+    padding: 40px;
+    border-radius: 60px;
+    background-color: rgb(245, 241, 254);
+
+}
+
+p{
+    color: royalblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
