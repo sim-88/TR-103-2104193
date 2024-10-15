@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar color={'red'+color} /> */}
+      <Navbar color={'red'+color} />
       <div>The Count is {count}</div>
       <button onClick={() => {
         setCount(count**2)
