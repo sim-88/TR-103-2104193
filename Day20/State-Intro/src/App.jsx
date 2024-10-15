@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
-
+import Navbar from './components/Navbar'
 function App() {
   const [count, setCount] = useState(2)
 
+  const [color,setColor]=useState(0)
+
+  useEffect(() => {
+    alert('Count is Updated')
+    setColor(color+1) //Navbar will be re-rendered
+  }
+  ,[count])
+
+
   return (
     <>
+      {/* <Navbar color={'red'+color} /> */}
       <div>The Count is {count}</div>
       <button onClick={() => {
         setCount(count**2)
