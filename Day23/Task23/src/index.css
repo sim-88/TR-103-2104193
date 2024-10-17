@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Card{
+    border: 2px solid purple;
+    padding: 23px;
+    text-align: center;
+    width: 200px;
+    background-color: rgb(247, 247, 170);
+
+}
+
+.Cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:33px
+}
+
+nav{
+    display: flex;
+    background-color: sienna;
+    height: 34px;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+    gap: 33px;
+    align-items: center;
+
+}
+ul li{
+    list-style-type: none;
+    color: rgb(217, 237, 178);
+}
