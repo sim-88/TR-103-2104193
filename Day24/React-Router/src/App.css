@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  background-color: rgb(62, 7, 62);
+  /* height: 40px; */
+  justify-content: center;
+  align-items: center;
+
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 16px;
+}
+
+
+nav ul li a{
+  color: rgb(205, 205, 205);
+}
+
+.red{
+  color: red;
+}
