@@ -1,4 +1,4 @@
-# Day 23 - MERN Stack Training
+# Day 24 - MERN Stack Training
 
 ## Topics Covered
 
